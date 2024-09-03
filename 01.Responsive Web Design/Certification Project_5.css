@@ -1,0 +1,183 @@
+:root {
+  --white: #f0f0f0;
+  --red: #BE3144;
+  --black: #000000;
+  --glay: #303848;
+  --blue: #45567D;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  color: var(--white);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--red);
+  width: 100%;
+  height: 12vh;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  padding: 0 0;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  float: right;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+nav > ul > li {
+  font-size: 1.2rem;
+  margin: 0 15px 0;
+}
+
+main {
+  margin-top: 12vh;
+}
+
+#welcome-section {
+  background-color: var(--black);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+#welcome-section > h1{
+  font-size: 55px;
+  text-align: center;
+  margin-top: 30%;
+  margin-bottom: 0px;
+}
+
+.welcome-p {
+  color: var(--red);
+  font-size: 25px;
+  font-style: italic;
+  margin-top: 0px;
+  text-align: center;
+}
+
+#projects {
+ background-color: var(--blue);
+ width: 100%;
+}
+
+#projects-divider-title {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+#projects h2 {
+  max-width: 650px;
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 2px solid var(--white);
+}
+
+#projects-divider-pic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.project-tile {
+  width: 400px;
+  height: 375px;
+  background-color: var(--black);
+}
+
+.project-tile img{
+  width: 100%;
+  max-width: 400px;
+  max-height: 375px;
+  object-fit: cover;
+}
+
+figcaption {
+  width : 100%;
+  height: 68px;
+  background-color: var(--gray);
+  font-size: 20px;
+  margin: 5px 35%;
+}
+
+button-divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+#show-all {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  width: 120px;
+  height: 7vh;
+  font-size: 20px;
+  text-align: center;
+  margin: 25px 40%;
+}
+
+button:hover {
+  background-color: var(--red);
+}
+
+#contact-info {
+  background-color: var(--glay);
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  display: grid;
+justify-content: center;
+}
+
+#contact-info h1 {
+  font-size: 55px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+#contact-info p {
+  margin-left: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+#profile-link {
+  text-align: center;
+  margin: 0;
+}
+
+#profile-link:hovor {
+  background-color: var(--red);
+}
+
+footer {
+  background-color: var(--glay);
+   height: 18vh;
+   width: 100%;
+   border-top: 4px solid var(--red);
+}
+
+@media(width <= 650px) {
+  #projects h2,#contact-info h1 {
+  font-size: 28px;
+  }
+}
