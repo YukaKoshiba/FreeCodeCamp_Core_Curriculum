@@ -1,0 +1,81 @@
+:root{
+  --backgroun: #0A0A23;
+  --main: #FFFFFF;
+  --caption: #00471b;
+  --button: #5a01a7;
+}
+
+body {
+  background: var(--backgroun);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 40px;
+  color: var(--main);
+}
+
+#check-area {
+  border-radius: 20px;
+  background: var(--main);
+  width: 450px;
+  height: 180px;
+  box-shadow: 0 6px 6px #002ead;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#check-area div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+label {
+  font-size: 18px;
+  border-top: none;
+  border-right: none;
+  border-left: left;
+  border-bottom: 2px solid var(--button);
+  margin: 30px 0px 20px;
+}
+
+#text-input {
+  width: 250px;
+  height: 30px;
+}
+
+#result {
+  margin: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  width: 96px;
+  height: 30px;
+  background: var(--button);
+  color: var(--main);
+  font-size: 14px;
+}
+
+.define-area {
+  border-radius: 20px;
+  background: var(--caption); 
+  color: var(--main); 
+  width: 450px;
+  height: 120px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0;
+}
