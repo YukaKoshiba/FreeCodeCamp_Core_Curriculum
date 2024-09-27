@@ -1,0 +1,86 @@
+:root {
+  --background: #3B3B4F;
+  --color: #FFFFFFFF;
+  --phone: #000000;
+  --window: #DFDFE2;
+}
+
+main{
+  background: var(--background);
+  color: var(--color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  margin: 30px;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin: 15px;
+}
+
+#phone {
+  background: var(--phone);
+  width: 260px;
+  height: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#camera {
+  width: 15px;
+  height: 15px;
+  background: var(--window);
+  margin: 10px 0 10px;
+  border-radius:25px;
+}
+
+#display {
+  background: var(--window);
+  color: var(--phone);
+  border: none;
+  width: 85%;
+  height: 85%;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px;
+}
+
+#user-input {
+  width: 200px;
+  height: 40px;
+  border-radius:10px;
+  border: 0.5px solid var(--phone);
+}
+
+#results-div {
+  font-size: 20px;
+}
+
+#check-btn, #clear-btn{
+  width: 90px;
+  height: 25px;
+  font-size: 18px;
+  border: none;
+  margin: 8px;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease   
+;
+}
