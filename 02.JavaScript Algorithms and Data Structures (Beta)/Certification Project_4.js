@@ -10,7 +10,6 @@ let cid = [
   ['TWENTY', 0], 
   ['ONE HUNDRED', 0]
 ];
-console.log(cid);
 
 // Reset #change-due
 const resetChangeDue = (changeHundred, changeTwenty, changeTen, changeFive, changeOne, changeQuarter, changeDime, changeNickel, changePenny) => {
@@ -28,7 +27,6 @@ const resetChangeDue = (changeHundred, changeTwenty, changeTen, changeFive, chan
 
 // Check register cash's count
 const checkRegister = (availableCid) => {
-  console.log("availableCid",availableCid);
 
   const hundredIndex = availableCid.findIndex(coin => coin[0] === 'ONE HUNDRED');
   const twentyIndex = availableCid.findIndex(coin => coin[0] === 'TWENTY');
@@ -67,7 +65,6 @@ const checkRegister = (availableCid) => {
 // Check coin pattern
 const checkCoinPattern = (availableCid, difference) => {
   let cashStock = checkRegister(availableCid);
-console.log("cashStock",cashStock);
 
   let numHundred = 0;
   let numTwenty = 0;
@@ -179,8 +176,6 @@ console.log("cashStock",cashStock);
           difference = difference - numPenny;
           leftPenny = cashStock.penny - numPenny;
         }
-
-console.log("残りのおつり￠",difference);
         
         if (difference > 0) {
           changeFlg = false;
@@ -212,7 +207,6 @@ console.log("残りのおつり￠",difference);
 };
 
 window.onload = function() {
-  let purchaseBtnCount = 0;
   let availableCid = [];
   let totalCid = 0;
 
@@ -267,43 +261,31 @@ drawerHundreds.innerHTML = `<p>Hundreds: $${hundred[1]}</p>`;
 
   purchaseBtn.addEventListener('click', () => {
     // To avoid decimal calculations, convert cid to cents.
-    let centCid = cid.map(([coin, amount]) => {
+    availableCid = cid.map(([coin, amount]) => {
     let decimalAmount = new Decimal(amount);
-    let decimalCid = decimalAmount.mul(100);
-    return [coin, decimalCid.toNumber()];
+    availableCid = decimalAmount.mul(100);
+    return [coin, availableCid.toNumber()];
     });
-console.log("centCid", centCid);
 
     // Reset display change
     resetChangeDue(changeHundred, changeTwenty, changeTen, changeFive, changeOne, changeQuarter, changeDime, changeNickel, changePenny);
 
     const sentCash = new Decimal(cash.value).mul(100).toNumber();
     const sentPrice = new Decimal(price).mul(100).toNumber();
-console.log("受取金額￠", sentCash);
-console.log("値段￠", sentPrice);
 
     // Check inputted cash
     // Not enough cash
     if (sentCash < sentPrice) {
       alert('Customer does not have enough money to purchase the item');
-      console.log("アラート");
     }
     // No cash
     if (sentCash === sentPrice) {
       changeStatus.innerHTML = '<p>No change due - customer paid with exact cash</p>';
-      console.log("お釣り不要");
     }
 
     // Calcurate cash
     if (sentCash > sentPrice) {
-      purchaseBtnCount++;
-      console.log("purchaseBtnCount", purchaseBtnCount);
 
-      if (purchaseBtnCount > 1) {
-        availableCid = availableCid.slice();
-      } else {
-        availableCid = centCid.slice();
-      }
       totalCid = parseFloat(availableCid.reduce((total, coin) => total + coin[1], 0));
 
       let difference;
@@ -313,7 +295,6 @@ console.log("値段￠", sentPrice);
       } else {
          // Calcurate register total
       difference =  sentCash - sentPrice;
-console.log("おつり￠",difference);
       }
 
       // Check lack of change
@@ -321,7 +302,6 @@ console.log("おつり￠",difference);
         changeStatus.innerHTML = '<p>Status: INSUFFICIENT_FUNDS </p>';
       } else {
         let result = checkCoinPattern(availableCid, difference);
-console.log("計算結果result", result);
 
         // Check coin pattern
         if (!result.changeFlg) {
@@ -390,10 +370,8 @@ console.log("計算結果result", result);
           // Change Status
           if (sentPrice < sentCash && totalCid - difference > 0) { 
             changeStatus.innerHTML = '<p>Status: OPEN </p>';
-            console.log("Status: OPEN");
           } else if (sentPrice < sentCash && difference === totalCid) {
             changeStatus.innerHTML = '<p>Status: CLOSED </p>';
-            console.log("Status: CLOSE");
           }
         }
       }
@@ -402,8 +380,3 @@ console.log("計算結果result", result);
     cash.value = '';
   });
 };
-
-price = 19.5;
-cid = [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
-cash.value = 20;
-document.querySelector('#purchase-btn').click();
