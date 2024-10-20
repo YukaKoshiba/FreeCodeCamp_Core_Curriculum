@@ -1,0 +1,147 @@
+:root {
+  --background: #0A0A23;
+  --color: #FFFFFFFF;
+  --register: #99c9ff;
+  --button: linear-gradient(#fecc4c, #ffac33);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background : var(--background);
+  color : var(--color);
+  font-family: Times New Roman;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
+}
+
+#change-due > p {
+  font-size: 19.2px;
+}
+
+#input-div {
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#input-div > label {
+  font-size: 18px;
+}
+
+#cash {
+  margin: 10px;
+}
+
+#purchase-btn {
+  background: var(--button);
+  font-size: 18px;
+  font-family: Arial;
+  width:100px;
+  height:30px;
+}
+
+#drawer-top {
+  background: var(--register);
+  width:200px;
+  height:50px;
+  position: relative;
+}
+
+#price {
+  font-size: 19.2px;
+  background : var(--background);
+  text-align: center;
+  display: grid;
+  align-items: center;
+  place-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#connecter {
+  background: var(--register);
+  width:40px;
+  height:35px;
+  margin: 0px 0px 0px -80px;
+}
+
+#drawer-middle {
+  background: var(--register);
+  width: 325px;
+  height: 250px;
+  border-radius: 10% 10% 0% 0%;
+  position: relative;
+}
+
+#drawer-middle-pattern {
+  width : 25%;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.pattern {
+  background-color: var(--background);
+  border-radius: 10%;
+  width: 20px;
+  height: 20px;
+}
+
+.drawer-middle-display {
+  background: var(--color);
+  color: black;
+  font-size: 17px;
+  width: 55%;
+  height: 85%;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
+}
+
+.drawer-bottom {
+  background: var(--register);
+}
+
+#drawer-bottom {
+  background: var(--register);
+  width: 325px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#drawer-bottom-pattern {
+  background : var(--background);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 15px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
