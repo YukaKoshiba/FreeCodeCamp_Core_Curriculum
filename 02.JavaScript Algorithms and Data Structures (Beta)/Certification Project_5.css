@@ -8,6 +8,25 @@
   --window: #F0F1F7;
   --windowShadow: #AEACB2;
   --tableBorder: #f5f6f7;
+
+  --bug: #AABB23;
+  --dark: #B59682;
+  --dragon: #9E93F1;
+  --electric: #FCCA33;
+  --ghost: #C68BB7;
+  --grass: #78CC55;
+  --ground: #DFBA52;
+  --fairy: #ED99ED;
+  --fire:#FB6D51;
+  --flying:#8899FF;
+  --fighting: #D3887E;
+  --ice: #66CCFE;
+  --normal:#B7B7AA;
+  --psychic: #FF66A3;
+  --poison: #C68BB7;
+  --rock: #BAAA66;
+  --steel: #AAA9BA;
+  --water:#41A0FD;
 }
 
 main {
@@ -70,6 +89,31 @@ label {
   font-size: 14px;
 }
 
+#basicInfo, #property {
+  display: flex;
+  margin-left: 10px;
+}
+
+#sprite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+#pokemon-name, #pokemon-id, #weight, #height {
+  margin: 5px 5px;;
+}
+
+#types {
+  display: flex;
+  margin-left: 15px;
+}
+#types p {
+  margin: 5px;
+  padding: 5px;
+}
+
 #table-div {
   display: flex;
   justify-content: center;
@@ -82,7 +126,7 @@ table {
   color : var(--title);
   text-align: center;
   position: absolute;
-  bottom: 12%;
+  bottom: 3%;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -95,4 +139,62 @@ th {
 td {
   border: solid 5px var(--tableBorder);
   padding: 8px;
+}
+
+#bug {
+  background: var(--bug);
+}
+#dark {
+  background: var(--dark);
+}
+#dragon {
+  background: var(--dragon);
+}
+#electric {
+  background: var(--electric);
+}
+#ghost {
+  background: var(--ghost);
+}
+#grass {
+  background: var(--grass);
+}
+#ground {
+  background: var(--ground);
+}
+#fairy {
+  background: var(--fairy);
+}
+#fire {
+  background: var(--fire);
+}
+#flying {
+  background: var(--flying);
+}
+#fighting {
+  background: var(--fighting);
+}
+#ice {
+  background: var(--ice);
+}
+#normal {
+  background: var(--normal);
+}
+#poison {
+  background: var(--poison);
+}
+#psychipoison {
+  background: var(--psychipoison);
+}
+#psychic{
+  background: var(--psychic);
+}
+#rock {
+  background: var(--rock);
+}
+#steel{
+  background: var(--steel);
+}
+#water {
+  background: var(--water);
 }
