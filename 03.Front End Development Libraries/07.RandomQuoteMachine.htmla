@@ -1,0 +1,44 @@
+<!-- Note: React 18 has known incompatibilities with the tests for this project (see issue) -->
+<!-- Objective: Build an app that is functionally similar to this: https://random-quote-machine.freecodecamp.rocks/. -->
+
+<!-- Enable to use language HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, jQuery for learning Front End Development Libraries -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Randam Quote Machine</title>　
+  </head>
+  <body>
+    <main>
+      <div id="quote-box" class="position-absolute top-50 start-50 translate-middle bg-success p-2 h-50 w-75 p-3 d-inline-block" style="--bs-bg-opacity: .5;">
+        
+        <figure class="text-center p-2 h-50">
+          <p id="text" class="blockquote">A penny saved is a penny earned.</p>
+        </figure>
+        
+        <figure class="text-end">
+          <p id="author" class="blockquote-footer">Benjamin Franklin</p>
+        </figure>
+        
+        <a href="https://twitter.com/intent/tweet?text=" id="tweet-quote" class="badge text-bg-primary" target="_blank" title="Let's share  in Twitter">T</a>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button id="new-quote" class="btn btn-success">New Quote</button>
+        </div>
+      </div>
+    </main>
+    <!-- JavaScript -->
+    <!--<script src="./script.js"></script>-->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  </body>
+</html>
