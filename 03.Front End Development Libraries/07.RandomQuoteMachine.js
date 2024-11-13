@@ -1,5 +1,7 @@
+// Note: React 18 has known incompatibilities with the tests for this project (see issue)
+// Objective: Build an app that is functionally similar to this: https://random-quote-machine.freecodecamp.rocks/.
 
-
+// Enable to use language HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, jQuery for learning Front End Development Libraries
 
 //jQuery
 // the function whwen loading the Web site
