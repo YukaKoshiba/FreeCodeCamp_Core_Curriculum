@@ -1,0 +1,57 @@
+// declare varidations
+$main-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$title-fonts: Russo One
+$background: #87b5b5;
+$content: #c0d8d8;
+$title: #4aa3a3;
+$code: #ffffff;
+}
+
+main {
+  background: $background;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: $main-fonts;
+}
+
+label {
+  background: $title;
+  width: 100%;
+  margin: 0;
+  display: block;
+  font: bold 20px $title-fonts;
+}
+
+label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://private-user-images.githubusercontent.com/146679300/386821275-f48b4a87-2355-4ec5-8af5-9ead26736dac.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE3MzQzODIsIm5iZiI6MTczMTczNDA4MiwicGF0aCI6Ii8xNDY2NzkzMDAvMzg2ODIxMjc1LWY0OGI0YTg3LTIzNTUtNGVjNS04YWY1LTllYWQyNjczNmRhYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTExNlQwNTE0NDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MDA5NTA4NTk3Yzc3ZTEyZTAzMTQxMjA4NmNmNjUyZjExOTI2NWJhMDM3MGFhNWY2Yjg3YzNhMTQwZDA5NDQ0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.z5vErbv6-EtV6Zug0ZgfXt89oft1dMQQzNDH7H88vLQ");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+code {
+  background: $code$;
+}
+
+#editor,
+#preview {
+  background: $content;
+  border: solid 1px black;
+}
+
+#editor-block {
+  width: 80%;
+  margin: 20px;
+}
+
+#preview-block {
+  width: 90%;
+}
+
+#preview img {
+  width: 80%;
+}
