@@ -1,3 +1,89 @@
 <!-- Enable to use HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery -->
 <!-- React 18 has known incompatibilities with the tests for this project -->
 <!-- Not supporting other frontend frameworks like Angular and Vue, but they are not currently supported. -->
+
+<!DOCTYPE html>
+<html lang="en">`
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <!-- To use Sass, CSS is comented out. -->
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+
+  <!-- load core script in highlight.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <!-- load the script of additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+  <!-- load stylesheets in highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github.css">
+</head>
+
+<body>
+  <main>
+    <div id="editor-block">
+      <label for="editor">Editor</label>
+      <textarea id="editor" type="text" rows="12" cols="100">
+# Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+
+Heres some code, ```&lt;div&gt;&lt;/div&gt;```, between 2 backticks.
+
+```
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '```' &amp;&amp; lastLine == '```') {
+    return multiLineCode;
+  }
+}
+```
+
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+
+There's also [links](https://www.freecodecamp.org), and
+&gt; Block Quotes!
+
+And if you want to get really crazy, even tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbered lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+      </textarea>
+    </div>
+    <div id="preview-block">
+      <label for="preview">Preview</label>
+      <div id="preview"></div>
+    </div>
+  </main>
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <!-- Marked library -->
+  <script src="https://cdnjs.com/libraries/marked"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.0/marked.min.js"></script>
+</body>
+
+</ html>
