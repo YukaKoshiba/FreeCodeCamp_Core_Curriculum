@@ -1,4 +1,4 @@
-// enable to use below code in CodePen
+// The following code cannot be used in CodePen
 // import React, { useRef } from 'react';
 const { useState, useRef, useEffect } = React;
 
