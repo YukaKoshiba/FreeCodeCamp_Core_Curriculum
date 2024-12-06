@@ -1,0 +1,53 @@
+/* witer codes with Saas */
+$background : #8D8D8D;
+$digitalBackground : #0A0A23;
+$clear : #AC3939;
+$equal : #004466; 
+$operatorColor : #FFFFFF;
+$digitalColor : #FFA500;
+
+main {
+  background : $background;
+  font-family: Times New Roman;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width : 100%;
+  height : 100%;
+}
+
+#calculator {
+  width : 400px;
+  height : 500px;
+}
+
+.display-group {
+  margin-top : 50px;
+}
+  
+#eqation, #display {
+  background : $digitalBackground;
+  font-family: digital;
+  color : $digitalColor;
+  margin : 0;
+  font-size : 20px;
+  text-align: right;
+}
+
+.operateBtn, .numBtn {
+  width : 50px;
+  height : 50px;
+}
+
+#equals {
+  background : $equal;
+  color : $operatorColor;
+}
+
+#clear {
+  width : 100%;
+  height : 50px;
+  background : $clear;
+  color : $operatorColor;
+}
